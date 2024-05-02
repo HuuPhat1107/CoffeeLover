@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -111,6 +106,7 @@ section {
     font-weight: Bold;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
+    font-size: 20px;
 }
 
 .btn-read-more button:hover {
@@ -271,6 +267,12 @@ section {
     padding-bottom: 100%;
 }
 
+.home-feedback .feedback-grid .fb-item img,
+.home-banner img {
+    width: 100%;
+    height: 100%;
+}
+
 @media only screen and (max-width: 768px) {
     section {
         margin-top: 10%;
@@ -286,6 +288,11 @@ section {
 
     .upload-img-box {
         width: 50%;
-        max-width: 150px;
+        max-width: 200px;
+    }
+
+    .home-feedback,
+    .btn-read-more {
+        margin: 10% 0;
     }
 }
