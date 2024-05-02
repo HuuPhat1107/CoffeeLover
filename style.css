@@ -283,4 +283,9 @@ section {
     .container-form .row {
         width: 100%;
     }
+
+    .upload-img-box {
+        width: 50%;
+        max-width: 150px;
+    }
 }
