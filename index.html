@@ -1,12 +1,796 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index,follow">
         <title>Nhuộm áo CFL3</title>
+        <link rel="icon"
+            href="https://routine.vn/media/favicon/default/output-onlinejpgtools.png"
+            type="image/x-icon" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+        <link rel="stylesheet"
+            href="https://campaign.routine.vn/frontend/css/mdb.min.css" />
+        <link rel="stylesheet"
+            href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <link rel="stylesheet"
+            href="https://campaign.routine.vn/frontend/css/style.css?v=1714621661">
+        <link rel="stylesheet"
+            href="https://campaign.routine.vn/frontend/css/custom.css?v=1714621661">
         <link rel="stylesheet" href="style.css">
+        <!-- <script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-0S3LM7XF1W');
+	</script> -->
+        <style>
+		.contact-wrapper {
+			position: relative;
+			overflow-x: hidden;
+		}
+		.contact-wrapper:before {
+			background-image: url(https://campaign.routine.vn/frontend/img/event/background.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			content: " ";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.contact-wrapper .contact-wrapper-inner {
+			padding: 150px 0;
+			position: relative;
+		}
+		.contact-wrapper .contact-wrapper-inner:before {
+			background-color: rgba(0,0,0,.3);
+			/*background-color: #fdf1dd;*/
+			content: " ";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.contact-wrapper .contact-wrapper-inner .contact-form-wrapper {
+			position: relative;
+			z-index: 1;
+			background-color: #fff;
+			border-radius: 10px;
+			padding: 50px 60px;
+		}
+		.post-comment-form-group {
+			margin-bottom: 30px;
+			border-top: 2px solid #4CAF50;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			border-bottom: 2px solid #4CAF50;
+		}
+		.post-comment-form-group .form-control {
+			background-color: rgba(86,119,252,.05);
+			margin-bottom: 30px;
+			font-size: 14px;
+			padding: 5px 15px;
+			border-color: #5677fc;
+			color: #3a3b3c;
+			resize: none;
+		}
+		.post-comment-form-group .btn-brand {
+			border-radius: 3px;
+		}
+		.btn-brand {
+			background-color: #5677fc;
+			color: #fff;
+			border-color: #5677fc;
+			-webkit-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+		}
+		.contact-wrapper .contact-wrapper-inner .contact-form-wrapper .contact-title h6 {
+			margin-bottom: 20px;
+			font-size: 25px;
+			color: #333;
+		}
+		#form-coupon p{
+			margin-bottom: 10px;
+		}
+		#form-coupon .text-event span{
+			color: rgb(241, 65, 6);
+		}
+		#form-coupon .box-code{
+			border: 2px dotted #d3d3d3;
+			border-radius: 5px;
+			padding: 5px;
+			background: #f5f3f3bd;
+			color: rgb(241, 65, 6);
+		}
+		#form-coupon .box-note p{
+			text-align: left;
+		}
+		.box-top-img img{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.box-content-form{
+			text-align: left;
+		}
+		.box-content-form p{
+			margin-bottom: 10px;
+			color: #333;
+		}
+		.box-content-form ul{
+			padding-left: 40px;
+		}
+		.box-content-form ul li{
+			margin-bottom: 10px;
+			color: #333;
+			list-style: disc;
+		}
+		.post-comment-form-group .form-group{
+			text-align: left;
+		}
+		.post-comment-form-group .form-group label{
+			margin-bottom: 10px;
+		}
+		.post-comment-form-group p{
+			text-align: left;
+			color: #333;
+			width: 100%;
+		}
+		.post-comment-form-group .form-check{
+			text-align: left;
+			margin-bottom: 5px;
+		}
+		.box-radio {
+			display: flex;
+		}
+		.box-radio .form-check{
+			margin-right: 20px;
+		}
+		#post-alert-form-group{
+			margin-bottom: 20px;
+		}
+		#form-check-return p.thongbao{
+			border: 2px solid #4CAF50;
+			border-radius: 20px;
+			padding: 20px;
+			font-weight: bold;
+			color: #4CAF50;
+		}
+		.text-form-dk{
+			text-align: center !important;
+			font-size: 18px;
+			text-transform: uppercase;
+			margin-bottom: 0px !important;
+		}
+		.clicksubmit{
+			position: fixed;
+			left: 56px;
+			bottom: 60px;
+			z-index: 99;
+			cursor: pointer;
+		}
+		.clicksubmit img{
+			width: 100px;
+		}
+		@media  only screen and (max-width: 767px){
+			.clicksubmit{
+				left: 20px;
+				bottom: 20px;
+			}
+			.clicksubmit img{
+				width: 65px;
+			}
+		}
+	</style>
     </head>
     <body>
+        <header>
+            <nav class="fixed-top">
+                <div class="logo">
+                    <a class="mt-2 mt-lg-0" href="https://routine.vn/"
+                        style="margin: 0 auto;" target="_blank">
+                        <img
+                            src="https://campaign.routine.vn/frontend/images/home/logo-coupon.png"
+                            alt="Routine" loading="lazy" />
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <div class="home-banner">
+                <picture> <source srcset="img/Banner-mobile.jpg"
+                        media="(max-width: 767px)"> <img id="popup-img"
+                        src="img/Banner - desktop.jpg"
+                        alt="Coffee Lovers Ss3"> </picture>
+            </div>
+            <div class="home-feedback">
+                <div class="feedback-grid">
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 1.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 2.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 3.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 4.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 2.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 3.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 4.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 2.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 3.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 4.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 2.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 3.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 4.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 2.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 3.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                    <div class="fb-item">
+                        <div class="content-overlay"></div>
+                        <img src="img/IMG_3834 4.png" alt srcset>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="fullname">Đinh Hữu Phát</h3>
+                            <p class="content-text">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Magni, numquam
+                                quidem! Maiores, minima! Vitae accusamus illum
+                                nam, optio inventore sed neque placeat magnam
+                                fuga iure earum ratione, maxime, a sapiente?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-read-more">
+                    <button>Xem thêm</button>
+                </div>
+            </div>
+            <div class="container-form">
+                <div class="form-tilte">
+                    <h4>Đánh giá trải nghiệm sản phẩm</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="fname">Họ tên</label>
+                        <input id="full_name" type="text" name="full_name"
+                            placeholder="Nhập họ tên" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="email">Email</label>
+                        <input type="text" placeholder="Nhập email" name="email"
+                            id="email" class="form-control" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Đánh giá</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="upload-box">
+                        <div class="upload-btn-box">
+                            <label class="upload-btn">
+                                <p>Upload images</p>
+                                <input
+                                    type="file"
+                                    multiple
+                                    data-max_length="20"
+                                    class="upload-inputfile" />
+                            </label>
+                        </div>
+                        <div class="upload-img-wrap"></div>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <input type="submit" value="Gửi">
+                </div>
+            </div>
+        </section>
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div class="footer-row">
+                    <div class="footer-information">
+                        <div class="footer-logo"><img
+                                src="https://routine.vn/media/wysiwyg/ezgif-7-ee007e6332a0_2x_2.png"
+                                alt="Logo Thương hiệu Routine"></div>
+                        <h3>CÔNG TY TNHH ROUTINE VIETNAM</h3>
+                        <p>Mã Số Thuế: 0106486365</p>
+                        <p>&nbsp;</p>
+                        <p>Văn Phòng: Tầng 8 tòa nhà Lê Đình,&nbsp;11Bis
+                            Nguyễn
+                            Gia Thiều,</p>
+                        <p>phường Võ Thị Sáu, quận 3, TP HCM.</p>
+                        <div class="footer-bct">
+                            <img
+                                src="https://campaign.routine.vn/frontend/images/kiemchung.png"
+                                alt srcset>
+                        </div>
+                    </div>
+                    <div class="footer-about">
+                        <div class="accordian">
+                            <div class="accordian_title">
+                                <h3>Công ty</h3>
+                            </div>
+                            <div class="accordian_content">
+                                <ul>
+                                    <li><a
+                                            href="https://routine.vn/gioi-thieu-ve-routine"
+                                            target="_blank"
+                                            rel="noopener">Giới
+                                            thiệu về ROUTINE</a></li>
+                                    <li><a href="https://jobs.routine.vn/"
+                                            target="_blank"
+                                            rel="noopener">Tuyển
+                                            dụng</a></li>
+                                    <li><a
+                                            href="https://routine.vn/tin-thoi-trang"
+                                            target="_blank"
+                                            rel="noopener">Tin
+                                            thời trang</a></li>
+                                    <li><a
+                                            href="https://routine.vn/franchise"
+                                            target="_blank"
+                                            rel="noopener">Hợp
+                                            tác nhượng quyền</a></li>
+                                    <li><a
+                                            href="https://routine.vn/thong-tin-lien-he"
+                                            target="_blank"
+                                            rel="noopener">Liên
+                                            hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-social"><h3>KẾT NỐI VỚI CHÚNG
+                                TÔI</h3>
+                            <ul class="social-link">
+                                <li><a class="social-icon"
+                                        href="https://www.facebook.com/routinevn"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/face.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://www.instagram.com/routine_official/"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/insta.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://zalo.me/3623603903787020327"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/zalo.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://www.youtube.com/channel/UCx32mX7R75Km_oQiI_NGAQg"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/ytb.png"
+                                                alt srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://www.tiktok.com/@routine_vietnam?lang=vi-VN"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/tiktok.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://shopee.vn/routinevn"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/shopee.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://www.lazada.vn/shop/routine-official"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/routine-lazada-logo.png"
+                                                alt srcset>
+                                        </div></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-policy">
+                        <div class="accordian">
+                            <div class="accordian_title">
+                                <h3>Chính sách khách hàng</h3>
+                            </div>
+                            <div class="accordian_content">
+                                <ul>
+                                    <li><a
+                                            href="https://routine.vn/chinh-sach-khach-hang"
+                                            target="_blank"
+                                            rel="noopener">Chính
+                                            sách khách hàng thân
+                                            thiết</a></li>
+                                    <li><a
+                                            href="https://routine.vn/chinh-sach-doi-tra"
+                                            target="_blank"
+                                            rel="noopener">Chính
+                                            sách đổi trả</a></li>
+                                    <li><a
+                                            href="https://routine.vn/chinh-sach-bao-hanh"
+                                            target="_blank"
+                                            rel="noopener">Chính
+                                            sách bảo hành</a></li>
+                                    <li><a
+                                            href="https://routine.vn/chinh-sach-bao-mat"
+                                            target="_blank"
+                                            rel="noopener">Chính
+                                            sách bảo mật</a></li>
+                                    <li><a
+                                            href="https://routine.vn/cau-hoi-thuong-gap"
+                                            target="_blank"
+                                            rel="noopener">Câu
+                                            hỏi thường gặp</a></li>
+                                    <li><a
+                                            href="https://routine.vn/huong-dan-mua-hang-online"
+                                            target="_blank"
+                                            rel="noopener">Hướng
+                                            dẫn mua hàng online</a></li>
+                                    <li><a
+                                            href="https://routine.vn/huong-dan-kiem-tra-hang-the"
+                                            target="_blank"
+                                            rel="noopener">Hướng
+                                            dẫn kiểm tra hạng thẻ thành
+                                            viên</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-store">
+                        <div id="store_info">
+                            <div class="store-title">
+                                <h3>Thông tin cửa hàng</h3>
+                            </div>
+                            <div>
+                                <ul class="list-store">
+                                    <li>
+                                        <h4 class="store-name">Cửa hàng thứ
+                                            34</h4>
+                                        <p>F15 tầng 1 AEON Mall Tân Phú, 30
+                                            Bờ Bao Tân Thắng, Phường Sơn Kỳ,
+                                            TP Hồ Chí Minh</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="store-name">Cửa hàng thứ
+                                            33</h4>
+                                        <p>809 Giải Phóng, Phường Giáp Bát,
+                                            Quận Hoàng Mai, TP Hà Nội</p>
+                                    </li>
+                                    <li>
+                                        <h4 class="store-name">Cửa hàng thứ
+                                            32</h4>
+                                        <p>192 - 194 Hoa Lan, Phường 2, Quận
+                                            Phú
+                                            Nhuận, TP Hồ Chí Minh</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-social"><h3>KẾT NỐI VỚI CHÚNG
+                                TÔI</h3>
+                            <ul class="social-link">
+                                <li><a class="social-icon"
+                                        href="https://www.facebook.com/routinevn"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/face.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://www.instagram.com/routine_official/"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/insta.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://zalo.me/3623603903787020327"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/zalo.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://www.youtube.com/channel/UCx32mX7R75Km_oQiI_NGAQg"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/ytb.png"
+                                                alt srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://www.tiktok.com/@routine_vietnam?lang=vi-VN"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/tiktok.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://shopee.vn/routinevn"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/shopee.png"
+                                                alt
+                                                srcset>
+                                        </div></a></li>
+                                <li><a class="social-icon"
+                                        href="https://www.lazada.vn/shop/routine-official"
+                                        target="_blank"
+                                        rel="nofollow noopener">
+                                        <div class="icon-img">
+                                            <img
+                                                src="https://campaign.routine.vn/frontend/images/routine-lazada-logo.png"
+                                                alt srcset>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-bct">
+                            <img
+                                src="https://campaign.routine.vn/frontend/images/kiemchung.png"
+                                alt srcset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> <script type="text/javascript"
+            src="https://campaign.routine.vn/frontend/js/mdb.min.js"></script>
+        <script
+            src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <!-- Custom scripts -->
+        <script type="text/javascript"
+            src="https://campaign.routine.vn/frontend/js/script.js?v=1714621661"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+        <script>
+
+    $(document).ready(function ($) {
+        // footer accordioan
+        if ($(window).width() < 520) {
+            $('.accordian .accordian_title').click(function () {
+                $(this).parent().find('.accordian_content').slideToggle();
+                $(this).parent().siblings().find('.accordian_content').slideUp();
+                $(this).parent().toggleClass('active_header');
+                $(this).parent().siblings().removeClass('active_header');
+            });
+        }
+        $(window).scroll(function () {
+            event.preventDefault();
+            if ($(this).scrollTop() > 400) {
+                $('.backTop').fadeIn();
+            } else {
+                $('.backTop').fadeOut();
+            }
+        });
+        $(window).scroll(function () {
+            event.preventDefault();
+            if ($(this).scrollTop() > 400) {
+                $('.menutop').addClass('fix'); // add class
+            } else {
+                $('.menutop').removeClass('fix'); // remove class
+            }
+        });
+    });
+</script>
     </body>
-    <script src="scripts.js"></script>
 </html>
